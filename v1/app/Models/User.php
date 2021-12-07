@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -41,4 +42,37 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
+
+    /**
+     * Method for search user by name
+     *
+     *
+     */
+    public static function search_by_name($name)
+    {
+
+        $user = DB::table('users')->where('name', $name)->first();
+
+        return $user;
+
+    }
+
+    /**
+     * Method for verify user password
+     *
+     *
+     */
+    public static function verify_password($password)
+    {
+        $passwordVerify = DB::table('users')->where('password', $password)->first();
+
+        return $passwordVerify;
+    }
 }
