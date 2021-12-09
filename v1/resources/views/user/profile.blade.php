@@ -2,8 +2,6 @@
 
 @section('title', 'Module Qr')
 
-@section('user_id', '{{$user->id}}')
-
 @section('main')
     <h3>Profile</h3>
     <form action="user/store" method="POST">

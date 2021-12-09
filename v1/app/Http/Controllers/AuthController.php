@@ -41,7 +41,7 @@ class AuthController extends Controller
 
                 if($connectionSave){
 
-                    return redirect('/user/profile/'.$userId);
+                    return redirect('/client');
 
                 }
 

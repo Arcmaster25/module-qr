@@ -20,10 +20,7 @@
 						<a href="/qr">Qr</a>
 					</li>
 					<li>
-						<a href="/users">Users</a>
-					</li>
-					<li>
-						<a href="/clients">Clients</a>
+						<a href="/client">Clients</a>
 					</li>
 				</ul>
 			</nav>
