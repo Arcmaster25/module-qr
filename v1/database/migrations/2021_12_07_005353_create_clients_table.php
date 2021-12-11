@@ -18,7 +18,8 @@ class CreateClientsTable extends Migration
             $table->string('name');
             $table->string('last_name');
             $table->integer('age');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->nullable();
+            $table->integer('ci')->comment('identity card of client');
             $table->string('mobile')->unique();
             $table->timestamps();
         });
